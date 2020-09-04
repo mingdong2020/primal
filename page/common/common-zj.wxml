@@ -1,0 +1,33 @@
+<view class="page-section">
+    <view class="join">
+      <view class="join-title">入驻浙江自贸区</view>
+      <view class="join-content" wx:for="{{joinfirst}}" wx:for-index="idx" wx:for-item="joinItem" wx:key="joinfirst">
+          <view class="join-item">
+            <text class="join-head">{{joinItem.joinHead}}</text>
+            <view class="join-lang">{{joinItem.joinLang}}</view>
+            <image class="join-img" src="{{joinItem.joinImg}}" />
+          </view>
+      </view>
+    </view>
+</view>
+<view class="page-section" style="clear:both;">
+    <view class="choose">
+      <view class="choose-title">选择明动</view>
+      <view class="choose-content">
+          <view class="choose-card">
+            <image bindtap="Preview" class="choose-img" src="https://www.mdqygl.cn/static/source/card.jpg" />
+          </view>
+          <view>
+            <view class="choose-item">证书：授权委托书</view>
+            <view class="choose-item">时间：2017年8月24日</view>
+            <view class="choose-item">委托方：舟山市普陀区经济</view>
+            <view class="choose-item"><text style="opacity:0;">委托方：</text><text>合作与招商局</text></view>
+            <view class="choose-item">受托方：明动企业管理(上海)</view>
+            <view class="choose-item"><text style="opacity:0;">受托方：</text><text>有限公司</text></view>
+            <view class="choose-item">内容：举办招商会、安排实地</view>
+            <view class="choose-item"><text style="opacity:0;">内容：</text><text>考察、推荐合适企业入</text></view>
+            <view class="choose-item"><text style="opacity:0;">内容：</text><text>驻，委托期限为三年。</text></view>
+          </view>
+      </view>
+    </view>
+</view>

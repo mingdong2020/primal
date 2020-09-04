@@ -1,0 +1,119 @@
+<view class="sense">
+    <view class="sense_tabbar">
+        <view class="nav-tabs">
+            <view class="tab-list  {{current == idx?'active':'default'}}" wx:for="{{tabArray}}" wx:key="tabName" wx:for-index="idx" wx:for-item="itemName">
+                  <image class="tab-image" catchtap="switchSlider" data-index="{{itemName.id}}" src="{{itemName.tabImg}}"/>
+                  <view class="tab-text" catchtap="switchSlider" data-index="{{itemName.id}}">{{itemName.tabName}}</view>
+            </view>
+            <view class="tab-input">
+                <navigator url="/page/sense/form/form">
+                    <image class="tab-image"  src="/image/sense-form.png"/>
+                    <view class="tab-text">在线预约</view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <include src="/page/common/search.wxml"/>
+    <view class="sense-tab">
+        <swiper class="swiper-box" current="{{current}}" indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="swiper.interval" duration="{{swiper.duration}}" class="tab-content" duration="300"  bindchange="changeSlider"> 
+        <block> 
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-box">
+              <view wx:for="{{senseFiscal}}" wx:for-item="list" wx:for-index="Index" wx:key="list" class="sen-qa">
+                <view class="sense-panel sense-appmsg">
+                    <view class="sense-panel-contain sense-panel_access">
+                        <view>
+                            <image class="sense-panel-img" src="{{list.ConImg}}" />
+                        </view>
+                        <view class="sense-panel-text sense-panel_primary">
+                            <view class="sense-font">{{list.ConQuertion}}</view>
+                        </view>
+                    </view>
+                    <view class="sense-panel-contain sense-panel_access">
+                        <view>
+                              <image class="sense-panel-img" src="/image/sen-answer.png" />
+                        </view>
+                        <view class="sense-panel-text sense-panel_primary">
+                            <view class="sense-font">{{list.ConAnswer}}</view>
+                        </view>
+                    </view>
+                </view>
+              </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-box">
+              <view wx:for="{{senseRegister}}" wx:for-item="list" wx:for-index="Index" wx:key="list" class="sen-qa">
+                <view class="sense-panel sense-appmsg">
+                    <view class="sense-panel-contain sense-panel_access">
+                        <view>
+                            <image class="sense-panel-img" src="{{list.ConImg}}" />
+                        </view>
+                        <view class="sense-panel-text sense-panel_primary">
+                            <view class="sense-font">{{list.ConQuertion}}</view>
+                        </view>
+                    </view>
+                    <view class="sense-panel-contain sense-panel_access">
+                        <view>
+                              <image class="sense-panel-img" src="/image/sen-answer.png" />
+                        </view>
+                        <view class="sense-panel-text sense-panel_primary">
+                            <view class="sense-font">{{list.ConAnswer}}</view>
+                        </view>
+                    </view>
+                </view>
+              </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-box">
+              <view wx:for="{{senseAgency}}" wx:for-item="list" wx:for-index="Index" wx:key="list" class="sen-qa">
+                <view class="sense-panel sense-appmsg">
+                    <view class="sense-panel-contain sense-panel_access">
+                        <view>
+                            <image class="sense-panel-img" src="{{list.ConImg}}" />
+                        </view>
+                        <view class="sense-panel-text sense-panel_primary">
+                            <view class="sense-font">{{list.ConQuertion}}</view>
+                        </view>
+                    </view>
+                    <view class="sense-panel-contain sense-panel_access">
+                        <view>
+                              <image class="sense-panel-img" src="/image/sen-answer.png" />
+                        </view>
+                        <view class="sense-panel-text sense-panel_primary">
+                            <view class="sense-font">{{list.ConAnswer}}</view>
+                        </view>
+                    </view>
+                </view>
+              </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-box">
+              <view wx:for="{{senseOther}}" wx:for-item="list" wx:for-index="Index" wx:key="list" class="sen-qa">
+                <view class="sense-panel sense-appmsg">
+                    <view class="sense-panel-contain sense-panel_access">
+                        <view>
+                            <image class="sense-panel-img" src="{{list.ConImg}}" />
+                        </view>
+                        <view class="sense-panel-text sense-panel_primary">
+                            <view class="sense-font">{{list.ConQuertion}}</view>
+                        </view>
+                    </view>
+                    <view class="sense-panel-contain sense-panel_access">
+                        <view>
+                              <image class="sense-panel-img" src="/image/sen-answer.png" />
+                        </view>
+                        <view class="sense-panel-text sense-panel_primary">
+                            <view class="sense-font">{{list.ConAnswer}}</view>
+                        </view>
+                    </view>
+                </view>
+              </view>
+            </scroll-view>
+        </swiper-item>
+        </block>
+        </swiper>
+    </view>
+</view>

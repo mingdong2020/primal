@@ -1,0 +1,116 @@
+<swiper class="swiper-box"  current="{{current}}" indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}" bindchange="changeSlider">
+  <block>
+     <swiper-item>
+      <scroll-view scroll-y="true" class="scroll-box">
+         <view class="list-view">
+           <view class="list-url list-appmsg" wx:for="{{typenz}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}" hover-class="list-active" bindtap="lookdetail">
+              <view class="list-img" >
+                  <image class="list-image" src="{{list.pic_card}}" />
+              </view>
+              <view class="list-text">
+                  <view class="list-head">名称：{{list.title}}</view>
+                  <view class="list-desc">地址：{{list.address}}</view>
+                  <view class="list-desc">日期：{{list.setup}}</view>
+              </view>  
+           </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+    	<scroll-view scroll-y="true" class="scroll-box">
+         <view class="list-view" >
+           <view class="list-url list-appmsg" wx:for="{{typewz}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}" hover-class="list-active" bindtap="lookdetail">
+              <view class="list-img" >
+                  <image class="list-image" src="{{list.pic_card}}" />
+              </view>
+              <view class="list-text">
+                  <view class="list-head">名称：{{list.title}}</view>
+                  <view class="list-desc">地址：{{list.address}}</view>
+                  <view class="list-desc">日期：{{list.setup}}</view>
+              </view> 
+           </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+    	<scroll-view scroll-y="true" class="scroll-box">
+         <view class="list-view" >
+           <view class="list-url list-appmsg" wx:for="{{typehz}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}" hover-class="list-active" bindtap="lookdetail">
+              <view class="list-img" >
+                  <image class="list-image" src="{{list.pic_card}}" />
+              </view>
+              <view class="list-text">
+                  <view class="list-head">名称：{{list.title}}</view>
+                  <view class="list-desc">地址：{{list.address}}</view>
+                  <view class="list-desc">日期：{{list.setup}}</view>
+              </view> 
+           </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+    	<scroll-view scroll-y="true" class="scroll-box">
+         <view class="list-view" >
+           <view class="list-url list-appmsg" wx:for="{{locationBJ}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}" hover-class="list-active" bindtap="lookdetail">
+              <view class="list-img" >
+                  <image class="list-image" src="{{list.pic_card}}" />
+              </view>
+              <view class="list-text">
+                  <view class="list-head">名称：{{list.title}}</view>
+                  <view class="list-desc">地址：{{list.address}}</view>
+                  <view class="list-desc">日期：{{list.setup}}</view>
+              </view>
+           </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+    	<scroll-view scroll-y="true" class="scroll-box">
+         <view class="list-view" >
+           <view class="list-url list-appmsg" wx:for="{{locationSH}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}" hover-class="list-active" bindtap="lookdetail">
+              <view class="list-img" >
+                  <image class="list-image" src="{{list.pic_card}}" />
+              </view>
+              <view class="list-text">
+                  <view class="list-head">名称：{{list.title}}</view>
+                  <view class="list-desc">地址：{{list.address}}</view>
+                  <view class="list-desc">日期：{{list.setup}}</view>
+              </view> 
+           </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+    	<scroll-view scroll-y="true" class="scroll-box">
+         <view class="list-view" >
+           <view class="list-url list-appmsg" wx:for="{{locationZJ}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}" hover-class="list-active" bindtap="lookdetail">
+              <view class="list-img" >
+                  <image class="list-image" src="{{list.pic_card}}" />
+              </view>
+              <view class="list-text">
+                  <view class="list-head">名称：{{list.title}}</view>
+                  <view class="list-desc">地址：{{list.address}}</view>
+                  <view class="list-desc">日期：{{list.setup}}</view>
+              </view> 
+           </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+    	<scroll-view scroll-y="true" class="scroll-box">
+         <view class="list-view" >
+           <view class="list-url list-appmsg" wx:for="{{locationSZ}}" wx:for-item="list" wx:key="index" data-id="{{list.id}}" hover-class="list-active" bindtap="lookdetail">
+              <view class="list-img" >
+                  <image class="list-image" src="{{list.pic_card}}" />
+              </view>
+              <view class="list-text">
+                  <view class="list-head">名称：{{list.title}}</view>
+                  <view class="list-desc">地址：{{list.address}}</view>
+                  <view class="list-desc">日期：{{list.setup}}</view>
+              </view> 
+           </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+  </block>
+</swiper>

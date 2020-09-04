@@ -1,0 +1,19 @@
+.Card-nav-box{
+  text-align: center;
+}
+.Card-nav-content{
+  width: 92%;
+  display: inline-block;
+  margin: 0 auto 18rpx auto;
+  border: 1rpx solid #E5E5E5;
+  box-shadow: 2rpx 2rpx 10rpx #666;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+.Card-nav-img{
+  max-width: 92%;
+  width: 600rpx;
+  height: 276rpx;
+  padding: 14rpx 0 0 0;
+  border-radius: 5rpx;
+}

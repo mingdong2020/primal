@@ -1,0 +1,18 @@
+<view class="container">
+<include src="/page/common/company-ban.wxml" />
+  <view class="page-section">
+    <view class="service-item">
+      <view class="service-title">自贸区要闻</view>
+      <view class="news-content">
+        <view class="news-items" wx:for="{{news}}" wx:for-item="Item" wx:for-index="idx" wx:key="news" data-id="{{Item.id}}" bindtap="lookdetail">
+            <view class="news-image">
+              <image class="news-img" src="/page/comimg/news.png"></image>
+            </view>
+            <view class="news-title">{{Item.title}}</view>
+        </view> 
+      </view>
+    </view>
+  </view>
+<include src="/page/common/common-zj.wxml" />
+<include src="/page/common/company-bottom.wxml" />
+</view> 

@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="category-item personal-info">
+    <view class="user-avatar">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="user-name">
+      <view class="user-nickname">
+        <text>{{userInfo.nickName}}</text>
+      </view>
+      <view class="user-locaiton">
+        <text>所在地：{{userInfo.city}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="category-item" bindtap="openMap" hover-class="center-active">
+    <block wx:for="{{mdzx}}" wx:key="title">
+      <view class="detail-item">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <view class="mdzx-about">
+          <text>{{item.text}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="category-item" hover-class="center-active">
+    <block wx:for="{{order}}" wx:key="title">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <view class="category-item">
+    <block wx:for="{{cooper}}" wx:key="title">
+      <view class="detail-item" hover-class="center-active" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <view class="center-footer">
+      <view class="center-footer__links">
+          <navigator url="http://www.mdtzzx.cn/md/" class="center-footer__link">明动咨询</navigator>
+          <navigator url="http://www.mingdongzixun.cn/m_buxian/" class="center-footer__link">股权信息服务</navigator>
+      </view>
+      <view class="center-footer__text">Copyright © 沪ICP备17000006号</view>
+  </view>
+</view>

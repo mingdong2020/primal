@@ -1,0 +1,41 @@
+@import "/page/common/company.wxss";
+.banner-1{
+  background:url(https://www.mdqygl.cn/static/source/ban-zj01.jpg) no-repeat;
+  background-size:100% 100%;
+  background-position:center center;
+}
+.banner-2{
+  background:url(https://www.mdqygl.cn/static/source/ban-zj01.jpg) no-repeat;
+  background-size:100% 100%;
+  background-position:center center;
+}
+.news-content{
+  padding-top: 8rpx;
+  height: 418rpx;
+  overflow: hidden;
+}
+.news-items{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin: 12rpx 0;   
+}
+.news-image{
+  margin:0 8rpx 0 18rpx;
+}
+.news-img{
+  margin-top: 8rpx;
+  width:48rpx;
+  height: 48rpx;
+}
+.news-title{
+  margin-right: 30rpx;
+  font-size:30rpx;
+  color: #525252;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

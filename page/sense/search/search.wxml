@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="page-body">
+  <include src="/page/common/search.wxml"/>
+    <view class="sense-font arrSum">{{arrSum}}</view>
+    <block wx:for="{{arrId}}" wx:for-item="Item" wx:for-index="idx" wx:key="arrId">
+      <view class="sen-qa">
+        <view class="sense-panel sense-appmsg">
+          <view class="sense-panel-contain sense-panel_access">
+              <view>
+                <image class="sense-panel-img" src="{{Item.ConImg}}" />
+              </view>
+              <view class="sense-panel-text sense-panel_primary">
+                  <view class="sense-font">{{Item.ConQuertion}}</view>
+              </view>
+          </view>
+          <view class="sense-panel-contain sense-panel_access">
+              <view>
+                <image class="sense-panel-img" src="/image/sen-answer.png" />
+              </view>
+              <view class="sense-panel-text sense-panel_primary">
+                  <view class="sense-font">{{Item.ConAnswer}}</view>
+              </view>
+          </view>
+        </view>
+      </view>    
+    </block>
+    <view class="Error {{hidden}}">
+      <image class="ErrorImg" src="{{arrImg}}"></image>
+      <view class="ErrorText">{{arrError}}</view>
+    </view>
+  </view>
+</view>

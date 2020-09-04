@@ -1,0 +1,138 @@
+.container {
+  background-color: #efeff4;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+.category-item {
+  width: 100%;
+  margin: 18rpx 0;
+  border-top: 1rpx solid #d9d9d9;
+  border-bottom: 1rpx solid #d9d9d9;
+  background-color: #fff;
+}
+.personal-info {
+  height: 130rpx;
+  display: flex;
+  padding: 18rpx 0;
+}
+.user-avatar {
+  margin: 0 30rpx;
+  width: 130rpx;
+  height: 130rpx;
+  position: relative;
+}
+.user-avatar image {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  border-radius: 2rpx;
+}
+.user-name {
+  margin-right: 30rpx;
+  flex: 1;
+  padding-top: 10rpx;
+  overflow: hidden;
+}
+.user-locaiton text{
+  font-size:24rpx;
+  font-family:Microsoft YaHei;
+  color: #666;
+}
+.detail-item{
+  display: flex;
+  padding-left: 30rpx;
+  border-bottom: 1px solid RGBA(217, 217, 217, .4);
+  height:85rpx;
+  align-items: center;
+}
+.detail-item:last-child{
+  border-bottom:none;
+}
+.detail-item image{
+  height: 60rpx;
+  width:60rpx;
+}
+.detail-item text{
+  color:#686b70;
+  font-size:30rpx;
+  flex:1;
+  margin-left: 30rpx;
+}
+.detail-item .detail-item-btn{
+  width: 50rpx;
+  color: #d9d9d9;
+  height: 40rpx;
+  margin-right: 20rpx;
+  text-align: center;
+}
+.detail-item .detail-item-btn::after{
+  display: inline-block;
+  content:'';
+  width: 16rpx;
+  height: 16rpx;
+  color: #d9d9d9;
+  margin-top: 8rpx;
+  border:3rpx #d9d9d9 solid;
+  border-top-color:transparent;
+  border-left-color:transparent;
+  transform: rotate(-45deg);
+}
+.mdzx-about{
+  width:92%;
+  margin:12rpx 6%;
+}
+.mdzx-about text{
+  color:#7F8389;
+  font-size:25rpx;
+  flex:1;
+  margin-left: 30rpx;
+}
+.center-active {
+  background-color: #ECECEC;
+}
+.center-footer{
+  margin:16rpx 0 12rpx 0;
+}
+.center-footer__links {
+  font-size: 22rpx;
+  padding: 0 .34em;
+  text-align:center;
+}
+.center-footer__link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 .62em;
+  position: relative;
+  font-size: 22rpx;
+  color: #586C94;
+}
+.center-footer__link:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  width: 1px;
+  border-left: 1rpx solid #C7C7C7;
+  color: #C7C7C7;
+  left: -0.65em;
+  top: .36em;
+  bottom: .36em;
+}
+.center-footer__link:first-child:before {
+  display: none;
+}
+.center-footer__text {
+  color: #85888f;
+  padding: 0 .34em;
+  font-size: 22rpx;
+}
+/* contact-button{
+  position:absolute;
+  opacity:0;
+} */

@@ -1,0 +1,10 @@
+@import "/page/common/company.wxss";
+@import "/page/common/card-common.wxss";
+.banner-1{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background:url(https://www.mdqygl.cn/static/source/card-icp.jpg) no-repeat;
+  background-size:100% 100%;
+  background-position:center center;
+}

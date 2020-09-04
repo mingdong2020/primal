@@ -1,0 +1,106 @@
+@import "/page/common/company.wxss";
+.banner-1{
+  background:url(https://www.mdqygl.cn/static/source/agency-ban.jpg) no-repeat;
+  background-size:100% 100%;
+  background-position:center center;
+}
+.banner-2{
+  background:url(https://www.mdqygl.cn/static/source/agency-ban.jpg) no-repeat;
+  background-size:100% 100%;
+  background-position:center center;
+}
+.scope{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-bottom: 18rpx solid #E5E5E5;        
+}
+.scope_icon{
+  margin: 14rpx 8rpx 0 28rpx;
+  width: 42rpx;
+  height: 42rpx;
+}
+.scope-text{
+  margin-right: 8rpx;
+  font-size: 28rpx;
+  color: #858585;
+}
+.market-content{
+  padding-bottom: 8rpx;
+  border-bottom: 18rpx solid #E5E5E5;
+}
+.market-desc{
+  font-size: 30rpx;
+  color: #333333;
+  margin:10rpx 30rpx 0 30rpx;
+  padding: 0 0 6rpx 0;
+}
+.market-num{
+  width: 28rpx;
+  height: 28rpx;
+}
+.market-desc-apmsg{
+  color: #757575;
+  text-indent: 44rpx;
+  border-bottom: 1rpx solid #E5E5E5;
+}
+.market-desc-apmsg:last-child{
+  border-bottom: none;
+}
+.matter-content{
+  padding: 26rpx 0;
+  border-bottom: 18rpx solid #E5E5E5;
+}
+.matter-items{
+  position: relative;
+  float: left;
+  width: 44%;
+  margin-top: 12rpx;
+  margin-left: 4%;
+  box-sizing: border-box;       
+  background-color: #dedede; 
+  border: 1px solid #c9c9c9;
+  box-shadow: 2rpx 2rpx 14rpx #d4d4d4;
+  border-radius:150% / 50%;
+}
+.matter-list{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.matter-img{
+  width: 58rpx;
+  height: 58rpx;
+  padding: 12rpx 16rpx;
+}
+.matter-text{
+  padding: 12rpx auto;
+  font-size: 30rpx;
+  color: #333333;
+}
+.process-items{
+  padding: 0 126rpx;
+  height: 100rpx;
+}
+.process_head{
+  left: 120px;
+  right: 120px;
+  padding-top: 13rpx;
+  line-height:1.5em;
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: 600;
+}
+.process_eng{
+  font-size: 25rpx;
+  color: #757575;
+}
+.Talk{
+  margin-top: 0rpx;
+}

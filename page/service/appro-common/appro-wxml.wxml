@@ -1,0 +1,80 @@
+<view class="container">
+    <view class="appro-left">
+      <view class="appro-apmsg">
+        <navigator class="appro-menu" url="/page/home/home" hover-class="navigator-hover" open-type="navigateBack">
+          <image class="appro-home" src="/page/comimg/home.png"></image>
+          <text>明动首页</text>
+        </navigator>
+      </view>
+      <view class="appro-items">
+          <block wx:for="{{Menu}}" wx:for-item="Item" wx:for-index="idx" wx:key="Menu">
+            <view>
+              <navigator class="appro-menu" url="{{Item.url}}" hover-class="navigator-hover" open-type="redirectTo">{{Item.name}}</navigator>
+            </view>
+          </block>
+      </view>
+    </view>
+    <view class="appro-page {{open ? 'c-state1' : ''}}">
+       <scroll-view scroll-y="true" class="scroll-box"> 
+        <view>
+            <image class="appro-btn" bindtap="tap_ch" src="/page/comimg/menu.png"></image>
+            <view class="appro-text">{{approName}}</view>
+        </view>
+          <view class="Card-desc">
+            <view class="Card-desc-text">{{approIntroduce}}</view>
+          </view>
+          <view class="Card-show">
+            <view class="Card-show-card">证件展示</view>
+            <view class="Card-show-content">
+              <view class="Card-image">
+                <image class="Card-img" bindtap="previewImage" src="{{approCard}}" />
+              </view>
+              <view class="Card-text">
+                <view class="Card-text-title">{{approName}}</view>
+                <view>适用企业类型：</view>
+                <view>
+                  <text decode="true" class="Card-text-article">{{approType}}</text>
+                </view>
+                <view>无证经营处罚办法：</view>
+                <view>
+                  <text decode="true" class="Card-text-article">{{approLaw}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="Card-show">
+            <view class="Card-show-card">办理条件</view>
+            <view class="Card-condition">
+              <block wx:for="{{Condition}}" wx:for-item="Item" wx:for-index="idx" wx:key="Condition">
+                <view class="Card-condition-items">
+                  <view>
+                    <image class="Card-num" src="{{Item.num}}" /> · 
+                  </view>
+                  <view class="Card-condition-text">
+                    <text>{{Item.name}}</text>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </view>
+          <view class="Card-show">
+            <view class="Card-show-card">办理流程</view>
+            <view class="Card-show-process">
+              <block wx:for="{{Process}}" wx:for-item="Item" wx:for-index="idx" wx:key="Process">
+                <view>
+                  <view class="Card-process-text" style="background:url({{Item.image}}) no-repeat;background-size: 100% 100%;background-position: center center;">
+                     <view style="margin:{{Item.padding}}">
+                        <view class="Card-pro-title">{{Item.name}}</view>
+                        <view class="Card-pro-eng">{{Item.eng}}</view>
+                     </view>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </view>
+<view class="Card-fixed">
+<include src="/page/common/company-bottom.wxml" />
+</view>
+ </scroll-view> 
+    </view>
+</view>

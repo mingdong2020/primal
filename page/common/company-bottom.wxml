@@ -1,0 +1,14 @@
+<view class="page-section">
+  <view class="Talk">
+    <view bindtap="makePhoneCall" class="Talk-Phone">拨打电话</view>
+    <view class="Talk-commun">
+      <contact-button type="default-light" size="27" session-form="weapp" style="right:0;"></contact-button>
+      <contact-button type="default-light" size="27" session-form="weapp" style="right:54rpx;"></contact-button>
+      <contact-button type="default-light" size="27" session-form="weapp" style="right:108rpx;"></contact-button>
+      <contact-button type="default-light" size="27" session-form="weapp" style="right:162rpx;"></contact-button>
+      <contact-button type="default-light" size="27" session-form="weapp" style="right:216rpx;"></contact-button>
+      <contact-button type="default-light" size="27" session-form="weapp" style="right:270rpx;"></contact-button>
+      <view>在线沟通</view>
+    </view>
+  </view>
+</view>

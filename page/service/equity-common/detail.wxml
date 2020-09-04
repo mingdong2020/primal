@@ -1,0 +1,46 @@
+<view class="detail-box">
+    <view class="detail-list">
+        <scroll-view scroll-y="true" style="height: 100%;width:94%;margin:0 auto;">
+            <view class="detail-title">{{detailgood.title}}</view>
+            <view class="detail-time">{{detailgood.release}}</view>
+            <view class="detail-detail">
+                <view class="detail-msg">公司名称：{{detailgood.title}}</view>
+                <view class="detail-msg">注册资本：{{detailgood.capital}}</view>
+                <view class="detail-msg">成立日期：{{detailgood.setup}}</view>
+                <view class="detail-msg">营业期限至：{{detailgood.time_limit}}</view>
+                <view class="detail-msg">登记机关：{{detailgood.register}}</view>
+                <view class="detail-msg">注册地址：{{detailgood.address}}</view>
+            </view>
+            <view class="detail-show">证件展示</view>
+            <view class="detail-img">
+                <image class="detail-card" src="{{detailgood.pic_card}}"></image>
+            </view>
+            <view class="detail-show">转让优势</view>
+            <view class="detail-frame">
+                {{detailgood.advantage}}
+            </view>
+            <view class="detail-show">转让流程</view>
+            <view class="detail-frame">
+                {{detailgood.flow}}
+            </view>
+            <view class="detail-show">转让时间</view>
+            <view class="detail-frame">{{detailgood.need_time}}</view>
+        </scroll-view>
+    </view>
+    <view class="detail-footer">
+      <view class="detail-1"></view>
+      <view class="detail-2"></view>
+      <view class="detail-3">
+        <text bindtap="makePhoneCall">电话咨询</text>
+      </view>
+      <view class="detail-4">
+           <contact-button type="default-light" size="27" session-from="weapp" style="right:0rpx;">
+           </contact-button>
+           <contact-button type="default-light" size="27" session-from="weapp" style="right:68rpx;">
+           </contact-button>
+           <contact-button type="default-light" size="27" session-from="weapp" style="right:136rpx;">
+           </contact-button>
+           <text>在线沟通</text>
+      </view>
+  </view>
+</view>

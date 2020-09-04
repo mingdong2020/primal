@@ -1,0 +1,82 @@
+<view class="container">
+    <view class="page-body">
+        <view class="page-section swiper">
+          <swiper class="ban" indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{background}}" wx:key="*this">
+              <swiper-item>
+                <view class="swiper-item {{item}}"></view>
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+        <view class="page-section">
+            <swiper class="nav">
+                <block wx:for="{{navIcon}}"  wx:key="navIconText" wx:for-item="navs" wx:for-index="idxs">
+                    <swiper-item>
+                        <view class="nav-item">
+                            <block wx:for="{{navIcon[idxs]}}"  wx:key="navIconText" wx:for-item="navs">
+                                <navigator class="nav-url" url="{{navs.navIconUrl}}">
+                                    <image class="nav-image" src="{{navs.navIconImg}}"></image>
+                                    <text class="nav-text">{{navs.navIconText}}</text>
+                                </navigator>
+                            </block>
+                        </view>        
+                    </swiper-item>    
+                </block>
+            </swiper>
+        </view>
+        <view class="home-park">
+           <navigator url="/page/service/tax-sh/tax-sh" class="home-park-panel" hover-class="list-active">
+               <view class="home-park-text home-left">上海园区</view>
+               <image class="home-park-img home-right" src="/image/sh-park.png" />
+               <view class="home-park-arrow"></view>
+           </navigator>
+           <navigator url="/page/service/tax-zj/tax-zj" class="home-park-panel" style="border-top:none;" hover-class="list-active">
+               <image class="home-park-img home-left" src="/image/zj-park.png" />
+               <view class="home-park-text home-right">浙江自贸区</view>
+               <view class="home-park-arrow"></view>
+           </navigator>
+        </view>
+        <view class="page-section list-panel">
+             <view class="list-title">股权信息服务</view>
+             <view wx:for="{{equity}}" wx:key="equityTitle" wx:for-item="lists" wx:for-index="index">
+                 <block wx:for="{{equity[index]}}" wx:key="equityTitle" wx:for-item="lists">
+                    <navigator url="{{lists.equityUrl}}" class="list-url list-appmsg" hover-class="list-active">
+                        <view class="list-img">
+                            <image class="list-image" src="{{lists.equityImg}}"/>
+                        </view>
+                        <view class="list-text">
+                            <view class="list-head">{{lists.equityTitle}}</view>
+                            <view  class="list-desc">{{lists.equityAddres}}</view>
+                            <view  class="list-desc">{{lists.equityDate}}</view>
+                        </view>
+                    </navigator> 
+                 </block>
+             </view>
+             <view class="list-more">
+                <view class="list-cell list-access list-link" bindtap="More">
+                    <view class="list-cell-text">查看更多</view>
+                    <view class="list-cell-icon list-cell-icon-access"></view>
+                </view>
+            </view>
+        </view>
+        <view class="page-section page-Menu">
+           <view class="fixMenu" animation="{{animation}}">
+              <view class="fixPhone">
+                 <view class="Phone" bindtap="makePhoneCall">电话</view>
+              </view>
+              <view class="fixWx">
+                 <contact-button type="default-light" size="27" session-from="weap"></contact-button>
+                 <contact-button type="default-light" size="27" session-from="weap" style="margin-left: -54rpx;"></contact-button>
+                 <contact-button type="default-light" size="27" session-from="weap" style="margin-top: 54rpx;margin-left: -54rpx;"></contact-button>
+                 <contact-button type="default-light" size="27" session-from="weap" style="margin-top:54rpx;"></contact-button>
+                 <view class="Wx">咨询</view>
+              </view>
+           </view>
+           <view class="arrow {{arrowBg}}" bindtap="changeArrow">
+              <image src="{{arrowLeft}}" animation="{{animations}}"></image>
+           </view>
+        </view>
+    </view>
+</view>

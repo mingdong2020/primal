@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="page-section">
+    <view class="Card-nav-box">
+        <block wx:for="{{CardList}}" wx:for-item="Item" wx:for-index="idx" wx:key="CardList">
+          <view class="Card-nav-content">
+            <navigator url="{{Item.url}}">
+              <image class="Card-nav-img" src="{{Item.img}}"></image>
+            </navigator>
+          </view>
+        </block>
+    </view>
+  </view>
+</view>

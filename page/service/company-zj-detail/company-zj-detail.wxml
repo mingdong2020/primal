@@ -1,0 +1,14 @@
+ <view class="container">
+  <view class="page-section">
+    <view class="news-content">
+      <view class="news-title">{{detailnews.title}}</view>
+      <view class="news-circum">
+        <text class="news-time">发布时间：{{detailnews.time}}</text>
+        <text class="news-source">来源：{{detailnews.source}}</text>
+      </view>
+      <view class="news-content">
+        <text decode="true" class="news-text">{{detailnews.content}}</text>
+      </view>
+    </view>
+  </view>
+ </view>

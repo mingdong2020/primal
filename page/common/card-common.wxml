@@ -1,0 +1,75 @@
+<view class="container">
+  <view class="page-section swiper">
+    <swiper class="ban" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="page-section">
+    <view class="ISP-nav">
+      <view class="Card-name">{{userInfo}}</view>
+      <view bindtap="CardNav">
+        <image class="Card-nav-img" src="/page/comimg/card-nav.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="Card-consultant">
+      <view class="Card-title">金牌顾问</view>
+      <view class="Card-content">
+        <block wx:for="{{consultant}}" wx:for-item="Item" wx:for-index="idx" wx:key="consultant">
+          <view class="Card-items" bindtap="makePhoneCall">
+            <view>
+              <view><image class="Card-img" src="{{Item.portrait}}"></image></view>
+              <view>{{Item.name}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="Card-introduce">{{Introduce}}</view>
+    <view class="Card-text">{{IntroText}}</view>
+    <view bindtap="previewImage" class="Card-preview">证件预览>></view>
+  </view>
+  <view class="page-section">
+    <view class="Panel-Card">
+      <view class="Card-introduce">{{transactHead}}</view>
+      <view class="Card-box">
+        <block wx:for="{{transact}}" wx:for-item="Item" wx:for-index="idx" wx:key="transact">
+        <view class="Card-list">
+          <view>
+            <image class="Card-sum" src="{{Item.num}}" /> · 
+          </view>
+          <view class="Card-list-text">
+            <text>{{Item.title}}</text>
+          </view>
+        </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="Panel-Card">
+      <view class="Card-introduce">{{materialHead}}</view>
+      <view class="Card-box">
+        <block wx:for="{{material}}" wx:for-item="Item" wx:for-index="idx" wx:key="material">
+        <view class="Card-list">
+          <view>
+            <image class="Card-sum" src="{{Item.num}}" /> · 
+          </view>
+          <view class="Card-list-text">
+            <text>{{Item.title}}</text>
+          </view>
+        </view>
+        </block>
+      </view>
+    </view>
+  </view>
+<include src="/page/common/company-bottom.wxml" />
+</view>

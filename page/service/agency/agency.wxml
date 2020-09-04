@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="page-section">
+    <swiper class="ban" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+              <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+    </swiper>
+  </view>
+  <view class="page-section">
+    <view class="scope">
+      <view>
+        <image class="scope_icon" src="/page/comimg/scope_icon.png"></image>
+      </view>
+      <view class="scope-text">上海 -</view>
+      <view class="scope-text">浙江 -</view>
+      <view class="scope-text">深圳</view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="scope-item">
+      <view class="service-title">市场环境</view>
+      <view class="market-content">
+        <block wx:for="{{market}}" wx:for-item="marItem" wx:for-index="idx" wx:key="market">
+          <view class="market-desc">
+            <image class="market-num" src="{{marItem.num}}" />
+            <text>{{marItem.title}}</text>
+          </view>
+          <view class="market-desc market-desc-apmsg">{{marItem.desc}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="scope-item">
+      <view class="service-title">服务内容</view>
+      <view class="matter-content">
+        <block wx:for="{{matter}}" wx:for-item="matItem" wx:for-index="idx" wx:key="matter">
+          <view class="matter-items">
+            <view class="matter-list">
+              <image class="matter-img" src="{{matItem.url}}"></image>
+              <view class="matter-text">{{matItem.name}}</view>
+            </view>
+          </view>
+        </block>
+        <view style="clear:both;"></view>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="scope-item">
+      <view class="service-title">办理流程</view>
+      <view class="process-content">
+        <view>
+          <block wx:for="{{process}}" wx:for-item="Item" wx:for-index="idx" wx:key="process">
+            <view class="process-items" style="background:url({{Item.image}}) no-repeat;  background-position: center center;background-size: 100% 100%;text-align: {{Item.direction}};">
+              <view class="process_head">{{Item.name}}</view>
+              <view class="process_eng">{{Item.english}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+<include src="/page/common/company-bottom.wxml" />
+</view>

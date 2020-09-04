@@ -1,0 +1,9 @@
+<view class="page">
+<include src="../equity-common/left.wxml"/>
+    <view class="page-top {{open ? 'c-state2' : ''}}">
+        <image class="page-top-img" bindtap="tap_ch" src="../../comimg/menu.png"></image>
+        <view class="page-title">商业保理</view>
+<include src="../equity-common/tabMenu.wxml"/>
+<include src="../equity-common/content.wxml"/>
+    </view>
+</view>

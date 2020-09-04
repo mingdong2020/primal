@@ -1,0 +1,90 @@
+<view class="container">
+   <view class="page-body">
+      <view class="page-section {{swiper}}">
+          <swiper class="ban" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+             <block wx:for="{{background}}" wx:key="*this">
+                <swiper-item>
+                   <view class="swiper-item {{item}}"></view>
+                </swiper-item>
+             </block>
+          </swiper>
+      </view>
+      <view class="page-section">
+        <view class="tax-sh-panel">
+            <view class="tax-sh-heading">财政扶持预计</view>
+            <view>
+                <view class="tax-sh-box">
+                   <view class="tax-input">
+                      <view>企业年纳税额(元)：</view>
+                      <view><input type="number" placeholder-style="font-weight:normal;" placeholder="{{Num}}" name="input" bindinput="bindInput" bindfocus="bindFocus" bindblur="bindBlur" /></view>
+                   </view>
+                   <view class="tax-flex">
+                        <view class="tax-flex_item tax-flex-title">财政扶持园区</view>
+                        <view class="tax-flex_item tax-flex-title">预计年财政扶持</view>
+                   </view>
+                   <view  class="tax-flex" wx:for="{{area}}" wx:for-index="idx" wx:for-item="itemName" wx:key="area">
+                        <view class="tax-flex_item">{{itemName.areaName}}</view>
+                        <view class="tax-flex_item">￥：{{itemName.taxSum}}</view>
+                   </view>
+                </view>
+                <view class="tax-btn"><button type="primary" size="default" hover-class="button-hover" bindtap="changeSum" loading="{{loading}}">开始计算</button></view>
+            </view>
+        </view>
+      </view>
+      <view class="page-section">
+         <view class="page-park">
+            <view class="park-title">上海园区</view>
+            <view class="park-content">
+               <block wx:for="{{park}}" wx:for-item="parkItem" wx:for-index="idx" wx:key="park">
+                  <view class="park-desc">{{parkItem.parkName}}</view>
+                  <view class="park-desc park-desc-apmsg">{{parkItem.parkDesc}}</view>
+              </block>    
+            </view>
+         </view>
+      </view>
+      <view class="page-section">
+         <view class="grid-title">办理流程</view>
+         <view class="tax-grid">
+            <block wx:for="{{grids}}" wx:for-index="idx" wx:for-item="grid" wx:key="{{grids}}">
+                <view class="grid" style="background:url({{grid.bgimg}}) no-repeat;background-position:center center;background-size: 100% 100%;">
+                   <image class="grid-img" src="{{grid.img}}" />
+                   <view class="grid-text">{{grid.title}}</view>
+                </view>
+            </block>
+         </view>
+         <view class="grid-foot">
+             <view class="grid-data">内资10-14工作日</view>
+             <view class="grid-data">外资15-20工作日</view>
+         </view>
+      </view>
+      <view class="page-section">
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:0rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:58rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:116rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:174rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:232rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:290rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:348rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:406rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:464rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:522rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:580rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:638rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:696rpx;">
+         </contact-button>
+         <view class="enter">入驻上海园区</view>
+      </view>
+   </view>
+</view>

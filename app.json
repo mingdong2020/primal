@@ -1,0 +1,111 @@
+{
+  "pages": [
+    "page/welcome/welcome",
+    "page/home/home",
+    "page/service/service",
+    "page/service/company-sh/company-sh",
+    "page/service/company-sz/company-sz",
+    "page/service/company-zj/company-zj",
+    "page/service/company-zj-detail/company-zj-detail",
+    "page/service/tax-sh/tax-sh",
+    "page/service/tax-zj/tax-zj",
+    "page/service/equity-lease/equity-lease",
+    "page/service/equity-lease-detail/equity-lease-detail",
+    "page/service/equity-factor/equity-factor",
+    "page/service/equity-factor-detail/equity-factor-detail",
+    "page/service/equity-broker/equity-broker",
+    "page/service/equity-broker-detail/equity-broker-detail",
+    "page/service/equity-agency/equity-agency",
+    "page/service/equity-agency-detail/equity-agency-detail",
+    "page/service/equity-loan/equity-loan",
+    "page/service/equity-loan-detail/equity-loan-detail",
+    "page/service/equity-itloan/equity-itloan",
+    "page/service/equity-itloan-detail/equity-itloan-detail",
+    "page/service/equity-pawn/equity-pawn",
+    "page/service/equity-pawn-detail/equity-pawn-detail",
+    "page/service/equity-invest/equity-invest",
+    "page/service/equity-invest-detail/equity-invest-detail",
+    "page/service/equity-equity/equity-equity",
+    "page/service/equity-equity-detail/equity-equity-detail",
+    "page/service/equity-assets/equity-assets",
+    "page/service/equity-assets-detail/equity-assets-detail",
+    "page/service/equity-private/equity-private",
+    "page/service/equity-private-detail/equity-private-detail",
+    "page/service/equity-other/equity-other",
+    "page/service/equity-other-detail/equity-other-detail",
+    "page/service/agency/agency",
+    "page/service/appro-alcohol/appro-alcohol",
+    "page/service/appro-road/appro-road",
+    "page/service/appro-food/appro-food",
+    "page/service/appro-medical/appro-medical",
+    "page/service/appro-chemistry/appro-chemistry",
+    "page/service/appro-export/appro-export",
+    "page/service/appro-Internet/appro-Internet",
+    "page/service/appro-private/appro-private",
+    "page/service/appro-foreign/appro-foreign",
+    "page/service/card-nav/card-nav",
+    "page/service/card-it/card-it",
+    "page/service/card-idc/card-idc",
+    "page/service/card-vpn/card-vpn",
+    "page/service/card-inland/card-inland",
+    "page/service/card-edi/card-edi",
+    "page/service/card-storage/card-storage",
+    "page/service/card-center/card-center",
+    "page/service/card-icp/card-icp",
+    "page/service/card-sp/card-sp",
+    "page/sense/sense",
+    "page/sense/form/form",
+    "page/sense/search/search",
+    "page/center/center",
+    "page/center/feedback/feedback"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "明动咨询",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "page/home/home",
+        "iconPath": "image/icon_home.png",
+        "selectedIconPath": "image/icon_home_HL.png",
+        "text": "明动咨询"
+      },
+      {
+        "pagePath": "page/service/service",
+        "iconPath": "image/icon_service.png",
+        "selectedIconPath": "image/icon_service_HL.png",
+        "text": "服务项目"
+      },
+      {
+        "pagePath": "page/sense/sense",
+        "iconPath": "image/icon_sense.png",
+        "selectedIconPath": "image/icon_sense_HL.png",
+        "text": "常识问答"
+      },
+      {
+        "pagePath": "page/center/center",
+        "iconPath": "image/icon_center.png",
+        "selectedIconPath": "image/icon_center_HL.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,55 @@
+ <view class="container">
+  <include src="/page/common/company-ban.wxml" />
+   <view class="page-section">
+     <view class="service-item">
+       <view class="service-title">服务项目</view>
+       <view class="sersh-content">
+         <view class="sersh-item serLeft" >
+           <block wx:for="{{serItem1}}" wx:for-index="idx" wx:for-item="itemName" wx:key="serItem1">
+             <view class="sersh-items {{itemName.hot}}">{{itemName.name}}</view>
+           </block>
+         </view>
+         <view class="sersh-item serRight">
+           <block wx:for="{{serItem2}}" wx:for-index="idx" wx:for-item="itemName" wx:key="serItem2">
+             <view class="sersh-items {{itemName.hot}}">{{itemName.name}}</view>
+           </block>
+           </view>
+       </view>
+     </view>
+   </view>
+   <view class="page-section">
+     <view class="sersh-need">
+       <view class="service-title">公司设立所需材料</view>
+       <view bindtap="makePhoneCall" class="sersh-body">
+         <image class="sersh-img" src="https://www.mdqygl.cn/static/source/need.png"></image>
+       </view>
+     </view>
+   </view>
+   <view class="page-section">
+     <view class="sersh-need">
+       <view class="service-title">服务流程</view>
+         <view class="block-content">
+            <block wx:for="{{serFlow}}" wx:for-index="idx" wx:for-item="itemName" wx:key="serFlow">
+              <view class="sersh-content flow-content">
+                <image class="flow-img" src="{{itemName.image}}"></image>
+                <view class="flow-text">{{itemName.name}}</view>
+              </view>
+            </block>
+         </view>  
+     </view>
+   </view>
+   <view class="page-section">
+     <view class="sersh-need">
+       <view class="service-title">注册成功后可获得</view>
+       <view class="block-content">
+         <block wx:for="{{serGain}}" wx:for-index="idx" wx:for-item="itemName" wx:key="serGain">
+           <view class="sersh-content flow-content">
+              <image class="flow-img" src="{{itemName.image}}"></image>
+              <view class="flow-text">{{itemName.name}}</view>
+           </view>
+         </block>  
+       </view>
+     </view>
+   </view>
+  <include src="/page/common/company-bottom.wxml" />
+</view> 

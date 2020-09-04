@@ -1,0 +1,41 @@
+.news-content{
+  width: 100%;
+  margin: 0 auto;
+}
+.news-title{
+  padding:24rpx 32rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #616161;
+  text-align: center;
+}
+.news-circum{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 26rpx;
+  color: #858585;
+  padding-bottom: 4rpx;
+  border-bottom: 1rpx solid #E5E5E5;
+}
+.news-time{
+  width: 48%;
+  margin-left: 30rpx;  
+}
+.news-source{
+  width: 52%;
+  text-align: right;
+  margin-right: 30rpx;
+}
+.news-content{
+  width: 94%;
+  padding: 0 3%;
+  margin: 22rpx auto 52rpx auto;
+}
+.news-text{
+  font-size: 30rpx;
+  color: #525252;
+}

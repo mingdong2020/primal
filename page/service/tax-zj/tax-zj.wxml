@@ -1,0 +1,81 @@
+<view class="container">
+   <view class="page-body">
+      <view class="page-section">
+          <swiper class="ban" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+             <block wx:for="{{background}}" wx:key="*this">
+                <swiper-item>
+                   <view class="swiper-item {{item}}"></view>
+                </swiper-item>
+             </block>
+          </swiper>
+      </view>
+      <view class="page-section">
+         <view class="tax-zj-heading">财政扶持预计</view>
+         <view wx:for="{{inputArr}}" wx:for-index="idx" wx:for-item="itemInput" wx:key="inputArr">
+            <view class="tax-zj-item">
+               <view>{{itemInput.inputName}}</view>
+               <view class="tax-zj-input"><input type="number" placeholder-style="font-weight: normal;" placeholder="{{itemInput.inputholder}}" name="input" bindinput="{{itemInput.inputFunction}}" /></view>
+            </view>
+         </view>
+         <view class="tax-btn">
+            <button type="primary" size="default" hover-class="button-hover" bindtap="setModalStatus" data-status="1">开始计算</button>
+         </view>
+      </view>
+      <view class="drawer_screen" bindtap="setModalStatus" data-status="0" wx:if="{{showModalStatus}}"></view>
+      <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+         <view class="close_icon" bindtap="setModalStatus" data-status="0">X</view>
+         <view class="drawer_attr_content">
+             <view class="drawer-title">浙江舟山财政扶持计算结果：</view>
+             <view class="drawer-item drawer-msg">
+                <view class="drawer-head">您企业年纳税额为：</view>
+                <view class="drawer-list">增值税：{{inputAdd}}</view>
+                <view class="drawer-list">所得税：{{inputIncome}}</view>
+                <view class="drawer-list"><text>合</text><text style="opacity:0;">合</text><text>计：{{inputSum}}</text></view>
+             </view>
+             <view class="drawer-item">
+                <view class="drawer-head">浙江地方政府返税为：</view>
+                <view class="drawer-list">增值税：{{sumX}}</view>
+                <view class="drawer-list">所得税：{{sumY}}</view>
+                <view class="drawer-list"><text>合</text><text style="opacity:0;">合</text><text>计：{{total}}</text></view>
+             </view>
+         </view>
+      </view>
+      <view class="page-section">
+         <view class="introduce">
+            <view class="intro-title">舟山自贸区南部片区</view>
+            <view class="intro-desc intro-desc-apmsg">舟山自贸区南部片区共25.35平方公里，舟山岛南部片区由新城区块、小干岛区块、沈家门区块、东港区块、朱家尖区块和相关海域组成。</view>
+            <view class="intro-desc">重点发展大宗商品交易、航空制造、零部件物流、研发设计及相关配套产业，建设舟山航空产业园，着力发展水产品贸易、海洋旅游、海水利用、现代商贸、金融服务、航运、信息咨询、高新技术等产业。</view>
+         </view>
+      </view>
+<include src="/page/common/common-zj.wxml" />
+      <view class="page-section">
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:0rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:58rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:116rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:174rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:232rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:290rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:348rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:406rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:464rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:522rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:580rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:638rpx;">
+         </contact-button>
+         <contact-button type="default-light" size="27" session-form="weapp" style="left:696rpx;">
+         </contact-button>
+         <view class="enter">入驻浙江自贸区</view>
+      </view>
+   </view>
+</view>

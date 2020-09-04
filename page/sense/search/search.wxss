@@ -1,0 +1,23 @@
+@import "/page/sense/sense.wxss";
+.arrSum{
+  margin-left: 18rpx;
+}
+.hidden{
+  display: none;
+}
+.show{
+  display: block;
+}
+.Error{
+  margin-top: 180rpx;
+  text-align: center;
+}
+.ErrorImg{
+  width: 220rpx;
+  height: 220rpx;
+}
+.ErrorText{
+  font-size: 32rpx;
+  color: #2e2e2e;
+  margin-top: 68rpx;
+}

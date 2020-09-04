@@ -1,0 +1,48 @@
+<view class="container">
+  <include src="/page/common/company-ban.wxml" />
+   <view class="page-section">
+     <view class="service-item">
+       <view class="service-title">最新成交客户</view>
+       <view class="deal-content">
+          <view class="deal-Items">
+              <block wx:for="{{Deal}}" wx:for-item="Item" wx:for-index="idx" wx:key="Deal">
+                <view class="deal-text" style="top:-{{dealTop}}px;">{{Item.text}}</view>
+              </block>
+          </view>  
+       </view>
+     </view>
+   </view>
+   <view class="page-section">
+     <view class="service-item">
+       <view class="service-title">选择明动</view>
+       <view class="deal-content">
+         <view class="power-content">
+           <block wx:for="{{power}}" wx:for-item="Item" wx:for-index="idx" wx:key="power">
+             <view class="power-items">
+               <view class="power-title" style="background: url({{Item.background}}) no-repeat;background-size: 100% 100%;background-position: center center;">
+                  <text>\n\n{{Item.title}}</text>
+               </view>
+               <view class="power-desc" style="border: 1px solid {{Item.border}};">{{Item.desc}}</view>
+             </view>
+           </block>
+         </view>
+       </view>
+     </view>
+   </view>
+   <view class="page-section">
+     <view class="service-item">
+       <view class="service-title">服务保障</view>
+        <view class="page-guard">
+          <view  class="guard-content">
+              <block wx:for="{{guard}}" wx:for-index="idx" wx:for-item="Item" wx:key="guard">
+                <view class="guard-items">
+                  <view class='guard-title'>{{Item.title}}</view>
+                  <view class='guard-desc'>{{Item.desc}}</view>
+                </view>
+              </block>
+          </view>
+        </view>
+     </view>
+   </view>
+<include src="/page/common/company-bottom.wxml" />
+</view> 

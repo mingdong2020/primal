@@ -1,0 +1,41 @@
+<view class="equity-block">
+    <view class="equity-flex">
+        <view><view class="equity-placeholder">股权性质：</view></view>
+        <view class="equity-flex__item">
+          <view class="equity-content">
+              <view class="equity-flex">
+                <view>
+                    <view class="placeholder {{current == 0 ? 'active' : ''}}" catchtap="switchSlider" data-index="0">内资</view>
+                </view>
+                <view>
+                    <view class="placeholder {{current == 1 ? 'active' : ''}}" catchtap="switchSlider" data-index="1">外资</view>
+                </view>
+                <view>
+                    <view class="placeholder {{current == 2 ? 'active' : ''}}" catchtap="switchSlider" data-index="2">中外合资</view>
+                </view>
+              </view>
+          </view>
+        </view>
+    </view>
+    <view class="equity-flex">
+        <view><view class="equity-placeholder">注册地址：</view></view>
+        <view class="equity-flex__item">
+          <view class="equity-content">
+              <view class="equity-flex">
+                <view>
+                  <view class="placeholder {{current == 3 ? 'active' : ''}}" catchtap="switchSlider" data-index="3">北京</view>
+                </view>
+                <view>
+                  <view class="placeholder {{current == 4 ? 'active' : ''}}" catchtap="switchSlider" data-index="4">上海</view>
+                </view>
+                <view>
+                  <view class="placeholder {{current == 5 ? 'active' : ''}}" catchtap="switchSlider" data-index="5">浙江</view>
+                </view>
+                <view>
+                  <view class="placeholder {{current == 6 ? 'active' : ''}}" catchtap="switchSlider" data-index="6">深圳</view>
+                </view>
+              </view>
+          </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,40 @@
+<view class="page-bottom" bindtap="tap_ch">
+  <view class="page-content">
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-lease/equity-lease" hover-class="navigator-hover">融资租赁</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-factor/equity-factor" hover-class="navigator-hover">商业保理</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-broker/equity-broker" hover-class="navigator-hover">保险经纪</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-agency/equity-agency" hover-class="navigator-hover">保险代理</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-loan/equity-loan" hover-class="navigator-hover">小额贷款</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-itloan/equity-itloan" hover-class="navigator-hover">互联网小额贷</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-pawn/equity-pawn" hover-class="navigator-hover">典当行</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-invest/equity-invest" hover-class="navigator-hover">投资管理</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-equity/equity-equity" hover-class="navigator-hover">股权基金</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-assets/equity-assets" hover-class="navigator-hover">资产管理</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-private/equity-private" hover-class="navigator-hover">私募牌照</navigator>
+      </view>
+      <view>
+          <navigator open-type="redirectTo" class="page-menu" url="../equity-other/equity-other" hover-class="navigator-hover">其它</navigator>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,2 @@
+@import "/page/common/company.wxss";
+@import "/page/service/appro-common/appro-wxss.wxss";
