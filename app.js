@@ -1,7 +1,7 @@
 const openIdUrl = require('./config').openIdUrl
 App({
   onLaunch: function () {
-    setTimeout(this._getUserInfo, 2000);
+    // setTimeout(this._getUserInfo, 2000);
   },
   _getUserInfo: function () {
     var userInfoStorage = wx.getStorageSync('user');
@@ -11,7 +11,6 @@ App({
         success: function () {
           wx.getUserInfo({
             success: function (res) {
-              console.log(res);
               that.globalData.g_userInfo = res.userInfo
               wx.setStorageSync('user', res.userInfo)
             },

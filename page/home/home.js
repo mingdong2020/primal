@@ -1,26 +1,10 @@
 Page({
   data: {
     background: ['banner-1', 'banner-2', 'banner-3'],
-    navIcon:[
-      [
-        { navIconUrl: "/page/service/company-sh/company-sh", navIconImg: "/image/nav-company.png", navIconText: "公司注册" },
-        { navIconUrl: "/page/service/tax-sh/tax-sh", navIconImg: "/image/nav-tax.png", navIconText: "财政扶持" },
-        { navIconUrl: "/page/service/equity-lease/equity-lease", navIconImg: "/image/nav-equity.png", navIconText: "股权信息" },
-        { navIconUrl: "/page/service/agency/agency", navIconImg: "/image/nav-agency.png", navIconText: "财务代理" },
-        { navIconUrl: "/page/service/appro-alcohol/appro-alcohol", navIconImg: "/image/nav-appro.png", navIconText: "专项审批" }
-      ],
-      [
-        { navIconUrl: "/page/service/card-nav/card-nav", navIconImg: "/image/nav-card.png", navIconText: "增值电信" },
-        { navIconUrl: "/page/sense/form/form", navIconImg: "/image/sense-form.png", navIconText: "留言预约" }
-      ],
-    ],
-    equity:[
-      [
-        { equityUrl: "/page/service/equity-lease-detail/equity-lease-detail?id=3", equityImg: "https://mdqygl.cn/static/source/equity/lease_show03.jpg", equityTitle: "名称：上海**融资租赁有限公司", equityAddres: "地址：中国（上海）自由贸易试验区**室", equityDate: "日期：2017年08月11日 发布" },
-        { equityUrl: "/page/service/equity-agency-detail/equity-agency-detail?id=3", equityImg: "https://mdqygl.cn/static/source/equity/agency_show03.jpg", equityTitle: "名称：**保险代理有限公司", equityAddres: "地址：中国(上海)自由贸易试验区锦康路**号", equityDate: "日期：2017年09月25日 发布" },
-        { equityUrl: "/page/service/equity-factor-detail/equity-factor-detail?id=4", equityImg: "https://mdqygl.cn/static/source/equity/factor_show04.jpg", equityTitle: "名称：华***国际商业保理有限公司", equityAddres: "地址：中国(上海)自由贸易试验区**路*号", equityDate: "2017年06月29日 发布" }
-      ],
-    ],
+    navIcon:[],
+    theme: '',
+    equity:[],
+    more: false,
     arrow: false,
     arrowLeft: '/image/arrowLeft.png',
     arrowBg: 'arrBg1',
@@ -34,6 +18,42 @@ Page({
     autoplay: true,
     interval: 6200,
     duration: 1600
+  },
+  onLoad: function () {
+    this.onFetchMenu();
+    this.onFetchEquity();
+  },
+  onFetchMenu: function() {
+    let that = this;
+    wx.request({
+      method: 'POST',
+      url: 'https://mdqygl.cn/api/menu',
+      success (res) {
+        console.log(res.data.data, "请求");
+        if (res.data.status) {
+          that.setData({
+            navIcon: res.data.data
+          }); 
+        }
+      }
+    })
+  },
+  onFetchEquity: function() {
+    let that = this;
+    wx.request({
+      method: 'POST',
+      url: 'https://mdqygl.cn/api/equity',
+      success (res) {
+        console.log(res.data.data, "请求");
+        if (res.data.status) {
+          that.setData({
+            more: res.data.more,
+            theme: res.data.theme,
+            equity: res.data.data
+          }); 
+        }
+      }
+    })
   },
   More: function(){
     wx.navigateTo({

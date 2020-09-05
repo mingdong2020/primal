@@ -38,8 +38,8 @@
                <view class="home-park-arrow"></view>
            </navigator>
         </view>
-        <view class="page-section list-panel">
-             <view class="list-title">股权信息服务</view>
+        <view class="page-section list-panel" wx:if="{{ equity.length > 0 }}">
+             <view class="list-title">{{ theme }}</view>
              <view wx:for="{{equity}}" wx:key="equityTitle" wx:for-item="lists" wx:for-index="index">
                  <block wx:for="{{equity[index]}}" wx:key="equityTitle" wx:for-item="lists">
                     <navigator url="{{lists.equityUrl}}" class="list-url list-appmsg" hover-class="list-active">
@@ -54,7 +54,7 @@
                     </navigator> 
                  </block>
              </view>
-             <view class="list-more">
+             <view class="list-more" wx:if="{{ more }}">
                 <view class="list-cell list-access list-link" bindtap="More">
                     <view class="list-cell-text">查看更多</view>
                     <view class="list-cell-icon list-cell-icon-access"></view>
